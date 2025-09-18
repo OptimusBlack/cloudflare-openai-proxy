@@ -1,0 +1,11 @@
+name = "openaiproxy"
+main = "worker.js"
+
+# Disable workers.dev deployments. Set to true if you want to deploy to a workers.dev subdomain.
+workers_dev = false
+
+# Compatibility date for Cloudflare runtime behaviour. Learn more: https://developers.cloudflare.com/workers/platform/compatibility-dates/
+compatibility_date = "2025-09-18"
+
+[observability]
+enabled = true

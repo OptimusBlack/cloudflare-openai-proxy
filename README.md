@@ -24,6 +24,7 @@ Notes
 
 - The worker in this repo simply rewrites incoming requests to `https://api.openai.com/v1/...` and forwards headers and body.
 - For security, consider storing your OpenAI API key as a secret/environment variable in Cloudflare and modify the worker to inject the Authorization header server-side instead of relying on client-provided headers.
+- By default the wrangler config `wrangler.toml` disables the cloudflare default `worker.dev` domain. Upadate the config if you want to enable that.
 
 Files
 
