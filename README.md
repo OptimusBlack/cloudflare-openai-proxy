@@ -16,6 +16,7 @@ Steps
    - In the Worker creation flow, choose to connect a GitHub repository.
    - Authorize Cloudflare to access your GitHub account and select your fork of this repository.
    - Choose the repository and branch you want Cloudflare to use.
+   - Update the build command from `npx wrangler deploy` to `npx wrangler deploy worker.js`.
 
 4. Every update to the code in this repository on your selected live branch will be deployed to the Cloudflare Worker instantly.
    - When you push changes to the selected branch in your fork, Cloudflare will automatically build/deploy the Worker.
