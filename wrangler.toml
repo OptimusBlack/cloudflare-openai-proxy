@@ -1,0 +1,4 @@
+name = "openaiproxy"
+main = "worker.js"
+compatibility_date = "2025-09-18" # Visit https://developers.cloudflare.com/workers/platform/compatibility-dates/ to learn more
+no_bundle = true
