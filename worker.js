@@ -13,7 +13,7 @@ async function handleRequest(req, ctx) {
   url.host = 'api.openai.com'
   url.pathname = `/v1${url.pathname}`
   
-  console.log("For testing ", url.toString())
+  console.log(url.toString())
   
   return fetch(
     url.toString(),
