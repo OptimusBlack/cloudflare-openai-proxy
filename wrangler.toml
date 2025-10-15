@@ -14,3 +14,6 @@ enabled = true
 binding = "DUMMY_DB"
 database_name = "dummy_db"
 database_id = "1fa14830-f2c6-4c08-92f2-37f78f6aab08" # replace with your D1 database ID
+
+[placement]
+mode = "smart"
