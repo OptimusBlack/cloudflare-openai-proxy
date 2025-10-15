@@ -13,7 +13,7 @@ async function handleRequest(req, ctx) {
   url.host = "api.openai.com";
   url.pathname = `/v1${url.pathname}`;
 
-  // This is to keep the worker alive in North America region
+  // This is to place the worker in North America region
   await env.DUMMY_DB.prepare("SELECT * FROM dummy_table").run();
 
   console.log(url.toString());
