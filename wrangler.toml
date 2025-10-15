@@ -5,7 +5,12 @@ main = "worker.js"
 workers_dev = false
 
 # Compatibility date for Cloudflare runtime behaviour. Learn more: https://developers.cloudflare.com/workers/platform/compatibility-dates/
-compatibility_date = "2025-09-18"
+compatibility_date = "2025-10-15"
 
 [observability]
 enabled = true
+
+[[d1_databases]]
+binding = "DUMMY_DB"
+database_name = "dummy_db"
+database_id = "1fa14830-f2c6-4c08-92f2-37f78f6aab08" # replace with your D1 database ID
