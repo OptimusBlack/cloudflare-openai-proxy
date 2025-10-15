@@ -9,25 +9,25 @@
  */
 
 async function handleRequest(req, ctx) {
-  const url = new URL(req.url)
-  url.host = 'api.openai.com'
-  url.pathname = `/v1${url.pathname}`
-  
-  console.log(url.toString())
-  
-  return fetch(
-    url.toString(),
-    {
-      method: req.method,
-      headers: req.headers,
-      body: req.body,
-      signal: req.signal,
-    }
-  )
+  const url = new URL(req.url);
+  url.host = "api.openai.com";
+  url.pathname = `/v1${url.pathname}`;
+
+  // This is to keep the worker alive in North America region
+  await env.DUMMY_DB.prepare("SELECT * FROM dummy_table").run();
+
+  console.log(url.toString());
+
+  return fetch(url.toString(), {
+    method: req.method,
+    headers: req.headers,
+    body: req.body,
+    signal: req.signal,
+  });
 }
 
 export default {
   async fetch(request, env, ctx) {
     return handleRequest(request, ctx);
-  }
+  },
 };
