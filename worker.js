@@ -8,7 +8,7 @@
  * Learn more at https://developers.cloudflare.com/workers/
  */
 
-async function handleRequest(req, ctx) {
+async function handleRequest(req, env) {
   const url = new URL(req.url);
   url.host = "api.openai.com";
   url.pathname = `/v1${url.pathname}`;
@@ -27,7 +27,7 @@ async function handleRequest(req, ctx) {
 }
 
 export default {
-  async fetch(request, env, ctx) {
-    return handleRequest(request, ctx);
+  async fetch(request, env) {
+    return handleRequest(request, env);
   },
 };
