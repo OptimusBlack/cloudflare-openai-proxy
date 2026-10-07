@@ -1,6 +1,6 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "openaiproxy",
+  "name": "cloudflare-openai-proxy",
   "main": "src/index.ts",
 
   // Disable workers.dev deployments. Set to true if you want to deploy to a workers.dev subdomain.
